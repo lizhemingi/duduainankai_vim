@@ -113,7 +113,7 @@ Bundle 'scrooloose/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1                 " 显示书签
 let NERDTreeIgnore=['\.\.$', '\.$', '\~$']  " 不显示.和..路径
-" autocmd vimenter * NERDTree   "启动vim时自动打开NERTree
+autocmd vimenter * NERDTree   "启动vim时自动打开NERTree
 Bundle 'jistr/vim-nerdtree-tabs'
 
 " python-mode配置 不再使用
@@ -122,9 +122,14 @@ Bundle 'jistr/vim-nerdtree-tabs'
 "" let g:pymode_rope_autoimport = 0
 
 Bundle 'davidhalter/jedi-vim'
+let g:jedi#use_tabs_not_buffers = 1
+
 Plugin 'panozzaj/vim-autocorrect'
+Plugin 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
 
 call vundle#end()
 " auto correction
